@@ -1,5 +1,3 @@
-package ru.netology.test;
-
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -17,6 +15,7 @@ public class CardDeliveryTest {
     static void setUp() {
         Configuration.baseUrl = "http://localhost:9999";
         Configuration.browser = "chrome";
+        Configuration.headless = true; // Запуск в headless-режиме для GitHub Actions
         Configuration.browserSize = "1920x1080";
     }
 
