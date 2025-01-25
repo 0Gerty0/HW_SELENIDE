@@ -19,8 +19,6 @@ tasks.test {
     systemProperty 'selenide.headless', 'true'
 }
 
-
-
 compileJava {
     options.encoding = 'UTF-8'
 }
