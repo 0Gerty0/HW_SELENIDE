@@ -12,12 +12,22 @@ repositories {
 dependencies {
     implementation 'com.codeborne:selenide:6.17.2'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.5.3'
 }
 
 tasks.test {
     useJUnitPlatform()
     systemProperty 'selenide.headless', 'true'
 }
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 
 compileJava {
     options.encoding = 'UTF-8'

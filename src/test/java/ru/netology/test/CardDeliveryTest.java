@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -13,8 +14,10 @@ public class CardDeliveryTest {
 
     @BeforeAll
     static void setUp() {
+        WebDriverManager.chromedriver().setup();
         Configuration.baseUrl = "http://localhost:9999";
         Configuration.browser = "chrome";
+        Configuration.headless = true;
         Configuration.browserSize = "1920x1080";
     }
 
@@ -35,4 +38,3 @@ public class CardDeliveryTest {
                 .shouldHave(text("Успешно! Встреча успешно забронирована на " + planningDate));
     }
 }
-
