@@ -15,7 +15,6 @@ public class CardDeliveryTest {
     static void setUp() {
         Configuration.baseUrl = "http://localhost:9999";
         Configuration.browser = "chrome";
-        Configuration.headless = true; // Запуск в headless-режиме для GitHub Actions
         Configuration.browserSize = "1920x1080";
     }
 
